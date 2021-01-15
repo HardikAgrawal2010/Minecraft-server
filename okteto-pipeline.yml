@@ -4,4 +4,3 @@ deploy:
   - okteto build -t okteto.dev/devenv:${OKTETO_GIT_COMMIT} --target build
   - IMAGE=okteto.dev/java-fitnesse-demo:${OKTETO_GIT_COMMIT} envsubst < /tmp/manifests/application/manifest.yaml | kubectl apply -f -
   - IMAGE=okteto.dev/devenv:${OKTETO_GIT_COMMIT} envsubst < /tmp/manifests/application/devenv/manifest.yaml | kubectl apply -f -
-  - java -Xmx1500M -Xms1500M -jar server.jar
