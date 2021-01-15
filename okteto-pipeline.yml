@@ -2,4 +2,3 @@ deploy:
   - git clone https://github.com/HardikAgrawal2010/Minecraft-server/
   - okteto build -t okteto.dev/java-fitnesse-demo:${OKTETO_GIT_COMMIT}
   - okteto build -t okteto.dev/devenv:${OKTETO_GIT_COMMIT} --target build
-  - java -Xmx1500M -Xms1500M -jar server.jar
