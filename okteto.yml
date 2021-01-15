@@ -8,8 +8,8 @@ volumes:
 sync:
 - .:/usr/src/app
 forward:
-- 8000:8000 # fitnesse
+- 8888:8888 # fitnesse
 resources:
   limits:
-    cpu: "2"
+    cpu: "3"
     memory: 6Gi
