@@ -1,0 +1,15 @@
+name: devenv
+image: 
+  name: okteto.dev/java-fitness:dev
+  target: build
+command: bash
+volumes:
+- /home/gradle/.gradle
+sync:
+- .:/usr/src/app
+forward:
+- 8000:8000 # fitnesse
+resources:
+  limits:
+    cpu: "2"
+    memory: 6Gi
